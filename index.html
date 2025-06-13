@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Lista de Tarefas</title>
+  <!-- Font Awesome CDN para ícones -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
+  <link rel="stylesheet" href="style.css" />
+  <script src="main.js" defer></script>
+</head>
+<body>
+
+  <div class="top-bar">
+    <h1>Lista de Tarefas</h1>
+  </div>
+
+  <!-- Filtros -->
+  <div class="filtros">
+    <button data-filtro="todas">Todas</button>
+    <button data-filtro="pendentes">Pendentes</button>
+    <button data-filtro="concluidas">Concluídas</button>
+  </div>
+
+  <!-- Campo para adicionar nova tarefa -->
+  <form id="form-tarefa">
+    <input type="text" id="nova-tarefa" placeholder="Adicione sua tarefa" />
+    <button type="submit">Adicionar</button>
+  </form>
+
+  <!-- Lista de tarefas dividida em cards -->
+  <div class="listas">
+    <div class="card">
+      <h2>Pendentes 🕒</h2>
+      <ul id="lista-pendentes"></ul>
+    </div>
+    <div class="card">
+      <h2>Concluídas ✅</h2>
+      <ul id="lista-concluidas"></ul>
+    </div>
+  </div>
+
+</body>
+</html>
