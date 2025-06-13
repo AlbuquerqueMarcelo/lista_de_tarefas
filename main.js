@@ -31,7 +31,6 @@ function mostrar() {
     const linha = document.createElement("div");
     linha.classList.add("linha");
 
-    // Span ou input com o texto da tarefa (inicialmente span)
     const texto = document.createElement("span");
     texto.textContent = tarefa.nome;
 
@@ -40,7 +39,6 @@ function mostrar() {
     checkbox.type = "checkbox";
     checkbox.checked = tarefa.check;
 
-    // Div das ações (botões)
     const acoes = document.createElement("div");
     acoes.classList.add("acoes");
 
@@ -104,12 +102,10 @@ function mostrar() {
         if (e.key === "Enter") {
           salvarEdicao();
         } else if (e.key === "Escape") {
-          // Cancelar edição com ESC e voltar ao texto original
           linha.replaceChild(texto, inputEdit);
         }
       };
 
-      // Salvar ao perder foco (click fora)
       inputEdit.onblur = () => {
         salvarEdicao();
       };
